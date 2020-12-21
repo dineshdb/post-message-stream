@@ -1,9 +1,9 @@
-const BasePostMessageStream = require('./BasePostMessageStream')
+import BasePostMessageStream from './BasePostMessageStream.js';
 
 /**
  * Window.postMessage stream.
  */
-module.exports = class WindowPostMessageStream extends BasePostMessageStream {
+export default class WindowPostMessageStream extends BasePostMessageStream {
 
   constructor ({
     name,
@@ -16,7 +16,7 @@ module.exports = class WindowPostMessageStream extends BasePostMessageStream {
     this._name = name
     this._target = target
     this._targetWindow = targetWindow || window
-    this._origin = (targetWindow ? '*' : location.origin)
+    this._origin = (targetWindow ? '*' : window.location.origin)
     this._onMessage = this._onMessage.bind(this)
 
     window.addEventListener('message', this._onMessage, false)

@@ -1,8 +1,8 @@
-const WindowPostMessageStream = require('./src/WindowPostMessageStream')
-const WorkerPostMessageStream = require('./src/WorkerPostMessageStream')
-const WorkerParentPostMessageStream = require('./src/WorkerParentPostMessageStream')
+import WindowPostMessageStream from './src/WindowPostMessageStream.js'
+import WorkerPostMessageStream from './src/WorkerPostMessageStream.js.js'
+import WorkerParentPostMessageStream from './src/WorkerParentPostMessageStream.js'
 
-module.exports = {
+export default {
   WindowPostMessageStream,
   WorkerPostMessageStream,
   WorkerParentPostMessageStream,

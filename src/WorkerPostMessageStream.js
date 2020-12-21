@@ -1,10 +1,10 @@
-const BasePostMessageStream = require('./BasePostMessageStream')
-const { DEDICATED_WORKER_NAME } = require('./enums')
+import BasePostMessageStream from './BasePostMessageStream.js'
+import { DEDICATED_WORKER_NAME } from './enums.js'
 
 /**
  * Worker-side Dedicated Worker postMessage stream.
  */
-module.exports = class WorkerPostMessageStream extends BasePostMessageStream {
+export default class WorkerPostMessageStream extends BasePostMessageStream {
 
   constructor () {
 

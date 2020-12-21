@@ -1,4 +1,4 @@
-const { Duplex } = require('readable-stream')
+import {Duplex} from "readable-stream";
 
 function noop () {
   return undefined
@@ -10,7 +10,7 @@ const ACK = 'ACK'
 /**
  * Incomplete base implementation for postMessage streams.
  */
-module.exports = class BasePostMessageStream extends Duplex {
+export default class BasePostMessageStream extends Duplex {
 
   constructor () {
 
